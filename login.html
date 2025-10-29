@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Introo Company Crew — Login</title>
+  <link rel="stylesheet" href="tushar.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="brand">
+      <h1>Introo Company Crew</h1>
+      <p>Sign in or create your account</p>
+    </header>
+
+    <section class="card" id="auth-card">
+      <div class="tabs">
+        <button id="tab-login" class="tab active">Login</button>
+        <button id="tab-signup" class="tab">Sign Up</button>
+      </div>
+
+      <form id="login-form" class="form active">
+        <label>Email
+          <input type="email" id="login-email" required />
+        </label>
+        <label>Password
+          <input type="password" id="login-password" required minlength="6" />
+        </label>
+        <div class="actions">
+          <button type="submit" class="btn">Login</button>
+          <button type="button" id="forgot-password" class="link-btn">Forgot password?</button>
+        </div>
+        <div id="login-message" class="message"></div>
+      </form>
+
+      <form id="signup-form" class="form">
+        <label>Full name
+          <input type="text" id="signup-name" required />
+        </label>
+        <label>Email
+          <input type="email" id="signup-email" required />
+        </label>
+        <label>Password (min 6 chars)
+          <input type="password" id="signup-password" required minlength="6" />
+        </label>
+        <div class="actions">
+          <button type="submit" class="btn">Create account</button>
+        </div>
+        <div id="signup-message" class="message"></div>
+      </form>
+    </section>
+
+    <section id="profile-card" class="card hidden">
+      <h2>Welcome, <span id="user-name">User</span> 👋</h2>
+      <p><strong>Email:</strong> <span id="user-email"></span></p>
+      <div class="profile-actions">
+        <button id="logout-btn" class="btn outline">Sign out</button>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <small>Built for <strong>Introo</strong> • Demo auth using Firebase</small>
+    </footer>
+  </main>
+
+  <!-- Firebase (compat libraries for simple usage) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+
+  <script src="login.js" defer></script>
+</body>
+</html>

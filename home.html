@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introo Company Crew - Home</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="logo">Introo<span>+</span></h1>
+    <div class="nav-actions">
+      <button id="darkModeBtn" class="btn">🌙</button>
+      <button id="logoutBtn" class="btn logout">Logout</button>
+    </div>
+  </nav>
+
+  <section class="dashboard">
+    <div class="welcome-card">
+      <h2 id="greeting">Welcome Back!</h2>
+      <p id="userName">Loading user...</p>
+      <p id="userEmail"></p>
+    </div>
+
+    <div class="actions-grid">
+      <!-- ✅ ID NAMES UPDATED TO MATCH JS -->
+      <div class="action-card" id="attendance-section">
+        <h3>📅 Attendance</h3>
+        <p>View and mark your daily attendance.</p>
+        <button class="btn">Go</button>
+      </div>
+
+      <div class="action-card" id="projects-section">
+        <h3>📂 Projects</h3>
+        <p>Track ongoing and completed projects.</p>
+        <button class="btn">View</button>
+      </div>
+
+      <div class="action-card" id="chat-section">
+        <h3>💬 Team Chat</h3>
+        <p>Collaborate with your teammates easily.</p>
+        <button class="btn">Open</button>
+      </div>
+
+      <div class="action-card" id="profile-section">
+        <h3>👤 Profile</h3>
+        <p>View and edit your account details.</p>
+        <button class="btn">Manage</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Introo Company Crew | Developed by Tushar M. Jadhav</p>
+  </footer>
+
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+:root{
+  --bg1:#0f2027; --bg2:#203a43; --accent:#00c6ff; --ok:#00ff9d;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; font-family:Inter, Poppins, sans-serif;
+  background: linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:#e9fbff;
+}
+.navbar{
+  display:flex;justify-content:space-between;align-items:center;padding:12px 20px;
+  background:rgba(0,0,0,0.12);backdrop-filter: blur(6px);
+}
+.logo{font-weight:700}
+.logo span{color:var(--accent)}
+.btn{background:var(--accent);border:none;color:#022; padding:8px 12px;border-radius:8px;cursor:pointer}
+.logout{background:#ff6b6b;color:#111}
+.container{max-width:880px;margin:28px auto;padding:18px;border-radius:14px;
+  background:rgba(255,255,255,0.03);box-shadow:0 8px 40px rgba(2,10,20,0.6)}
+h1{margin:0 0 14px}
+.controls{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+.mark-btn{background:linear-gradient(90deg,var(--accent),#2aa0ff);padding:12px 18px;border-radius:22px;font-weight:700}
+.status{color:#bfefff;font-weight:600}
+
+/* Calendar */
+.calendar{margin:14px 0}
+.calendar-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.monthYear{font-weight:700;color:var(--accent)}
+.weekday-row{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:8px;color:#9fd8e8;font-size:0.9rem}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.day{
+  min-height:70px;padding:8px;border-radius:10px;background:rgba(255,255,255,0.02);
+  display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;
+  transition:transform .12s,box-shadow .12s,background .12s
+}
+.day:hover{transform:translateY(-6px);box-shadow:0 8px 18px rgba(0,0,0,0.4)}
+.day.empty{background:transparent;cursor:default;box-shadow:none;transform:none}
+.day .date-num{font-size:1.05rem;font-weight:700}
+.day .time{font-size:0.78rem;color:#cfeef7;margin-top:6px}
+
+/* states */
+.present{background:linear-gradient(180deg,var(--accent),#00a0d9);color:#011;box-shadow:0 8px 22px rgba(0,198,255,0.18)}
+.today{border:2px dashed rgba(255,255,255,0.08)}
+.today-marked{background:linear-gradient(90deg,var(--ok),#b0ffde);color:#022;font-weight:800;box-shadow:0 10px 30px rgba(0,255,157,0.14)}
+
+/* history */
+.history{margin-top:18px}
+#attendanceList{list-style:none;padding:0;margin:0}
+#attendanceList li{background:rgba(0,0,0,0.25);padding:10px;border-radius:8px;margin:8px 0;display:flex;justify-content:space-between;align-items:center}
+#attendanceList li .time{font-size:0.9rem;color:#bfefff}
+
+/* responsive */
+@media (max-width:720px){
+  .calendar-grid .day{min-height:62px;padding:6px}
+}

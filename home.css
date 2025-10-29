@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1b1b1b, #111);
+  color: #fff;
+  transition: background 0.5s, color 0.5s;
+}
+
+.navbar {
+  background: #111;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #00bcd4;
+  box-shadow: 0 4px 20px rgba(0, 188, 212, 0.2);
+}
+
+.logo {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+.logo span {
+  color: #00bcd4;
+}
+
+.btn {
+  background: #00bcd4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.btn:hover {
+  background: #0097a7;
+  transform: scale(1.05);
+}
+.logout {
+  background: #e53935;
+}
+.logout:hover {
+  background: #b71c1c;
+}
+
+.dashboard {
+  padding: 2rem;
+  text-align: center;
+}
+
+.welcome-card {
+  margin: 2rem auto;
+  background: rgba(0, 188, 212, 0.1);
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.action-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.action-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 188, 212, 0.3);
+}
+
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #aaa;
+}
+
+body.light-mode {
+  background: linear-gradient(135deg, #f0f0f0, #eaeaea);
+  color: #222;
+}
+body.light-mode .navbar {
+  background: #fff;
+  color: #222;
+}
+body.light-mode .action-card {
+  background: #fff;
+  color: #333;
+}
+body.light-mode .btn {
+  background: #00796b;
+}
+body.light-mode .logout {
+  background: #d32f2f;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

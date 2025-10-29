@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendance | Introo Company Crew</title>
+  <link rel="stylesheet" href="attendance.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="logo">Introo<span>+</span></h1>
+    <div class="nav-actions">
+      <button id="backBtn" class="btn">🏠 Home</button>
+      <button id="logoutBtn" class="btn logout">Logout</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>📅 Attendance Tracker</h1>
+
+    <div class="controls">
+      <button id="markBtn" class="mark-btn">Mark Present — One Click</button>
+      <div id="statusMsg" class="status"></div>
+    </div>
+
+    <div class="calendar">
+      <div class="calendar-header">
+        <button id="prevMonth" class="nav-month">◀</button>
+        <h2 id="monthYear"></h2>
+        <button id="nextMonth" class="nav-month">▶</button>
+      </div>
+      <div class="weekday-row">
+        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+      </div>
+      <div class="calendar-grid" id="calendarDays"></div>
+    </div>
+
+    <div class="history">
+      <h2>Recent Marks</h2>
+      <ul id="attendanceList"></ul>
+    </div>
+  </div>
+
+  <!-- Firebase (v8 compat) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <script src="attendance.js"></script>
+</body>
+</html>
