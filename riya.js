@@ -3,13 +3,14 @@ const team = [
     name: "Tushar Jadhav",
     role: "Founder",
     image: "WhatsApp Image 2025-10-07 at 2.14.41 PM.jpeg",
-    link src = "login.html"
+    link : "login.html",
 
   },
   {
     name: "Riya Kavathe",
     role: "CEO",
     image: "riyain.jpg",
+    link : "login.html"
 
   },
   {
