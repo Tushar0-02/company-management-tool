@@ -8,7 +8,7 @@ const team = [
   {
     name: "Riya Kavathe",
     role: "CEO",
-    image: "riya.jpg",
+    image: "riyain.jpg",
 
   },
   {
