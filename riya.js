@@ -24,9 +24,9 @@ const team = [
 
   },
   {
-    name: "Tnvi Bane",
+    name: "Tanvi Bane",
     role: "Backend Engineer",
-    image: "tnvi.jpg",
+    image: "tanvi.jpeg",
 
 
   },
